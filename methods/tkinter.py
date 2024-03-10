@@ -43,9 +43,9 @@ class TkGame:
 
     def __init_tk_styles__(self):
         self.style = ttk.Style()
-        self.style.configure('My.TEntry', foreground=self.FG_COLOR, background=self.BG_COLOR, fieldbackground=self.BG_COLOR, bordercolor=self.BG_COLOR, borderwidth=1, relief='flat', font=('Arial', self.FONTSIZE))
-        self.style.configure('TButton', font = ('Arial', 20), foreground = self.FG_COLOR, background = self.BG_COLOR, bordercolor=self.BG_COLOR)
-        self.style.configure('My.TLabel', foreground=self.FG_COLOR, background=self.BG_COLOR, font=('Arial', 20))         
+        self.style.configure('My.TEntry', foreground='black', background=self.BG_COLOR, fieldbackground=self.BG_COLOR, bordercolor=self.BG_COLOR, borderwidth=1, relief='flat', font=('Tahoma', self.FONTSIZE))
+        self.style.configure('TButton', font = ('Tahoma', 20,'bold'), foreground = self.FG_COLOR, background = self.BG_COLOR, bordercolor=self.BG_COLOR)
+        self.style.configure('My.TLabel', foreground=self.FG_COLOR, background=self.BG_COLOR, font=('Arial', 20, 'bold'))         
             
     def __init_window__(self, initial_board):
         # score
