@@ -71,6 +71,7 @@ def apply_action(A):
     return A
 
 def update_grid(display, control):
+    old_display = display.copy()
     if control.upper() == 'A':
         for row in range(4):
             A = display[row,:]
@@ -100,7 +101,13 @@ def update_grid(display, control):
     else:
         raise('ERROR: invalid argument for input')
     
-    return display
+    if (display == old_display).all():
+        # move not possible
+        return None
+    else:
+        # move possible
+        return display
+ 
 
 # check if game is over
 def check_game_over(display):
